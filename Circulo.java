@@ -3,18 +3,21 @@
     public class Circulo {
         private int radio;
 
+        public void setRadio(int radio) {
+            this.radio = radio;
+        }
         public Circulo() {
-            this.radio = 3;
+            this.radio = 2;
         }
         public int getRadio() {
             return radio;
         }
-        public double getArea(int radio) {
+        public double calcularArea() {
             double area = (Math.PI * (radio * radio));
             return area;
         }
 
-            public double getPerimetro(int radio){
+            public double calcularPerimetro(){
                 double perimetro;
                 perimetro = 2 * Math.PI * radio;
                 return perimetro;
@@ -24,8 +27,8 @@
         Circulo circ1 = new Circulo();
 
 
-        System.out.println(circ1.getArea(circ1.getRadio()));
-        System.out.println(circ1.getPerimetro(circ1.getRadio()));
+        System.out.println(circ1.calcularArea());
+        System.out.println(circ1.calcularPerimetro());
     }
 
 
