@@ -37,13 +37,13 @@ public class Rectangulo {
         return perimetro;
     }
 
-    public class main {
+
         public static void main(String[] args) {
             Rectangulo rect1 = new Rectangulo();
             System.out.println(rect1.getArea(rect1.getBase(), rect1.getAltura()));
             System.out.println(rect1.getPerimetro(rect1.getBase(), rect1.getAltura()));
         }
-    }
+
 
 
 }

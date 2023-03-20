@@ -78,12 +78,23 @@ public class Libro {
     public Fecha getFecha_publicacion() {
         return fecha_publicacion;
     }
-    public class main{
-        public static void main(String[] args) {
 
+    public void mostrarDatos(){
+        System.out.println(getEditorial());
+        System.out.println(getAutor());
+        System.out.println(getTitulo());
+        System.out.println(getISBN());
+        System.out.println(getCantidad_paginas());
+        System.out.println(getFecha_publicacion());
+
+    }
+
+    public static void main(String[] args) {
+        Libro libro1 = new Libro();
+        libro1.mostrarDatos();
         }
     }
-}
+
 
 
 
