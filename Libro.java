@@ -22,13 +22,13 @@ public class Libro {
         this.editorial = "KEL";
         this.fecha_publicacion = new Fecha(3,5,2018);
     }
-    public Libro(String titulo, Persona autor, int ISBN, int cantidad_paginas, Fecha fecha_publicacion) {
+    public Libro(String titulo){
         this.titulo = titulo;
-        this.autor = autor;
-        this.ISBN = ISBN;
-        this.cantidad_paginas = cantidad_paginas;
+        this.autor = new Persona();
+        this.ISBN = 35749461;
+        this.cantidad_paginas = 190;
         this.editorial = "KEL";
-        this.fecha_publicacion = fecha_publicacion;
+        this.fecha_publicacion = new Fecha(3,5,2018);
     }
 
     public void setTitulo(String titulo) {
@@ -81,17 +81,27 @@ public class Libro {
 
     public void mostrarDatos(){
         System.out.println(getEditorial());
-        System.out.println(getAutor());
+        System.out.println(autor.getNombre());
         System.out.println(getTitulo());
         System.out.println(getISBN());
         System.out.println(getCantidad_paginas());
-        System.out.println(getFecha_publicacion());
+        fecha_publicacion.corta(fecha_publicacion);
+    }
 
+    public boolean compararLibros(Libro libro1, Libro libro2){
+        boolean comparacion=false;
+        if (libro1.getTitulo()==libro2.getTitulo()){
+            comparacion=true;
+        }
+        return comparacion;
     }
 
     public static void main(String[] args) {
         Libro libro1 = new Libro();
+        Libro libro2 = new Libro("Caidos del mapa");
         libro1.mostrarDatos();
+        boolean comparacion= libro1.compararLibros(libro1,libro2);
+        System.out.println(comparacion);
         }
     }
 
