@@ -9,10 +9,22 @@ public class Persona {
         this.direccion="Esmeralda algo";
     }
 
+    public Persona(String nombre, int edad, String direccion) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.direccion = direccion;
+    }
+
     public Persona(String nombre, String direccion) {
         this.nombre = nombre;
         this.edad = edad;
         this.direccion = direccion;
+    }
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.direccion = "1234";
     }
 
     public String getDireccion() {

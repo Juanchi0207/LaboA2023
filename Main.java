@@ -19,5 +19,7 @@ public class Main {
         Cancion cancion1 = new Cancion();
         System.out.println(cancion1.getTitulo());
         System.out.println(cancion1.getAutor());
+        Fecha fecha1 = new Fecha();
+        fecha1.corta();
     }
 }

@@ -43,18 +43,18 @@ public class Fecha {
         return dia;
     }
 
-    public void corta(Fecha fecha1){
+    public void corta(){
         int dia, mes, anio;
-        dia= fecha1.getDia();
-        mes=fecha1.getMes();
-        anio=fecha1.getAnio();
+        dia=this.dia;
+        mes=this.mes;
+        anio=this.anio;
         System.out.println(dia+"-"+mes+"-"+anio);
         }
-    public  void larga(Fecha fecha1){
+    public  void larga(){
         int dia, mes, anio;
-        dia=fecha1.getDia();
-        mes= fecha1.getMes();
-        anio= fecha1.getAnio();
+        dia=this.dia;
+        mes=this.mes;
+        anio=this.anio;
         switch (mes){
             case 1:
                 System.out.println(dia + " de enero del " + anio);

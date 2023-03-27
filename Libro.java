@@ -85,12 +85,12 @@ public class Libro {
         System.out.println(getTitulo());
         System.out.println(getISBN());
         System.out.println(getCantidad_paginas());
-        fecha_publicacion.corta(fecha_publicacion);
+        fecha_publicacion.corta();
     }
 
     public boolean compararLibros(Libro libro1, Libro libro2){
         boolean comparacion=false;
-        if (libro1.getTitulo()==libro2.getTitulo()){
+        if (libro1.fecha_publicacion.getAnio()>libro2.fecha_publicacion.getAnio()){
             comparacion=true;
         }
         return comparacion;
