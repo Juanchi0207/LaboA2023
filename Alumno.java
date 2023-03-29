@@ -1,21 +1,22 @@
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Alumno {
     private String apellido;
     private Fecha fecha_de_nacimiento;
-    private ArrayList<Double>notas;
+    private ArrayList<Materias>materias;
 
     public Alumno() {
         this.apellido = "Sampieri";
         this.fecha_de_nacimiento = new Fecha(2,7,2005);
-        this.notas = new ArrayList<Double>();
+        this.materias = new ArrayList<Materias>();
     }
 
-    public Alumno(String apellido, Fecha fecha_de_nacimiento, ArrayList<Double> notas) {
+    public Alumno(String apellido, Fecha fecha_de_nacimiento, ArrayList<Materias> materias) {
         this.apellido = apellido;
         this.fecha_de_nacimiento = fecha_de_nacimiento;
-        this.notas = notas;
+        this.materias = materias;
     }
 
     public String getApellido() {
@@ -34,17 +35,14 @@ public class Alumno {
         this.fecha_de_nacimiento = fecha_de_nacimiento;
     }
 
-    public ArrayList<Double> getNotas() {
-        return notas;
+    public ArrayList<Materias> getMaterias() {
+        return materias;
     }
 
-    public void setNotas(ArrayList<Double> notas) {
-        this.notas = notas;
+    public void setMaterias(ArrayList<Materias> materias) {
+        this.materias = materias;
     }
 
-    public void agregarNota(double nota){
-        notas.add(nota);
-    }
 
     public void menorNota(){
         double menor= notas.get(0);
@@ -65,13 +63,14 @@ public class Alumno {
         }
         System.out.println(mayor);
     }
+
+
     public static void main(String[] args) {
-        ArrayList<Double>notas=new ArrayList<Double>();
-        notas.add(6.5);
-        notas.add(7.0);
-        Alumno alumno = new Alumno("Sampieri",new Fecha(2,7,2005),notas);
+        Scanner entrada = new Scanner(System.in);
+        Alumno alumno = new Alumno("Sampieri",new Fecha(2,7,2005),new ArrayList<Materias>());
         alumno.agregarNota(9.0);
         alumno.mayorNota();
         alumno.menorNota();
     }
+
 }

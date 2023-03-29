@@ -21,8 +21,8 @@ public class CD {
             Cancion ver =Canciones.get(posicion);
             System.out.println(ver.getTitulo());
         }
-        public void numeroCanciones1(){
-            System.out.println("El CD tiene: "+ Canciones.size() );
+        public int numeroCanciones1(){
+            return Canciones.size();
         }
         public ArrayList<Cancion> getCanciones() {
             return Canciones;
