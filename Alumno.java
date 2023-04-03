@@ -114,10 +114,6 @@ public class Alumno {
         System.out.println("El promedio general es: " + suma/materias.size());
     }
 
-
-
-
-
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         Alumno alumno = new Alumno("Juan","Sampieri",new Fecha(2,7,2005),new ArrayList<Materias>());
