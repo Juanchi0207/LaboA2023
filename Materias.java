@@ -30,6 +30,8 @@ public class Materias {
     public void setListanotas(ArrayList<Double> listanotas) {
         this.notas = listanotas;
     }
+
+
 }
 
 
