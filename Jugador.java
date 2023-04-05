@@ -22,6 +22,13 @@ public class Jugador {
         this.num_camiseta = num_camiseta;
     }
 
+    public Jugador(){
+        this.nombre="Ciro";
+        this.nacimiento=new Fecha();
+        this.capitania=true;
+        this.num_camiseta=10;
+
+    }
     public Jugador(String nombre, Fecha nacimiento, boolean capitania, int num_camiseta) {
         this.nombre = nombre;
         this.nacimiento = nacimiento;
