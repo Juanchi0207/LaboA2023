@@ -33,7 +33,7 @@ public class CD {
         }
 
     public static void main(String[] args) {
-        Cancion cancion = new Cancion(new Persona("Harry Styles" ,25 , "Harry's House"),"Matilda");
+        Cancion cancion = new Cancion(new Persona("Harry","Styles" ,25 , new Fecha(),"Harry's house"),"Matilda");
         CD disco = new CD();
         disco.agregar(cancion);
     }

@@ -23,6 +23,6 @@ public class mainTorneo {
             equipo.agregarEquipo();
             equipos.add(equipo);
         }
-        Fixture fixture=new Fixture(equipos);
+        //Fixture fixture=new Fixture(equipos);
     }
 }

@@ -1,4 +1,4 @@
-public class Rectangulo {
+public class Rectangulo extends Figura_geometrica{
     private int base;
     private int altura;
 
@@ -12,6 +12,16 @@ public class Rectangulo {
     }
 
 
+    @Override
+    public double calcularArea() {
+        return base*altura;
+    }
+
+    @Override
+    public double calcularPerimetro() {
+        return base*2+altura*2;
+    }
+
     public int getBase() {
         return base;
     }
@@ -19,10 +29,7 @@ public class Rectangulo {
     public int getAltura() {
         return altura;
     }
-    public double getArea(int base, int altura) {
-        double area = base*altura;
-        return area;
-    }
+
 
     public void setBase(int base) {
         this.base = base;
@@ -32,16 +39,11 @@ public class Rectangulo {
         this.altura = altura;
     }
 
-    public double getPerimetro(int base, int altura){
-        double perimetro=base*2+altura*2;;
-        return perimetro;
-    }
-
 
         public static void main(String[] args) {
             Rectangulo rect1 = new Rectangulo();
-            System.out.println(rect1.getArea(rect1.getBase(), rect1.getAltura()));
-            System.out.println(rect1.getPerimetro(rect1.getBase(), rect1.getAltura()));
+            System.out.println(rect1.calcularArea());
+            System.out.println(rect1.calcularPerimetro());
         }
 
 

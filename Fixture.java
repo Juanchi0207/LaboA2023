@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 
 public class Fixture {
 private ArrayList<Partidos> partidos;
@@ -33,7 +33,7 @@ public class Partidos {
 
 
 
-   /* public void crearPartido() {
+   public void crearPartido() {
 
         for (int i = 0; i < e1.getDisponiblidadHoraria().size(); i++) {
             for (int j = 0; i < e2.getDisponiblidadHoraria().size(); j++) {
@@ -49,3 +49,4 @@ public class Partidos {
 }
 
 */
+

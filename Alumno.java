@@ -2,48 +2,20 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Alumno {
-    private String nombre;
-    private String apellido;
-    private Fecha fecha_de_nacimiento;
+public class Alumno extends Persona{
+    private String division;
     private ArrayList<Materias>materias;
 
     public Alumno() {
-        this.nombre = "Juan";
-        this.apellido = "Sampieri";
-        this.fecha_de_nacimiento = new Fecha(2,7,2005);
+        super("Juan","Sampieri",25,new Fecha(2,7,2005),"bolivia 5717");
+        this.division = "5to A";
         this.materias = new ArrayList<Materias>();
     }
 
-    public Alumno(String nombre, String apellido, Fecha fecha_de_nacimiento, ArrayList<Materias> materias) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.fecha_de_nacimiento = fecha_de_nacimiento;
+    public Alumno(String nombre, String apellido, int edad, Fecha fecha_de_nacimiento, String direccion, String division, ArrayList<Materias> materias) {
+        super(nombre,apellido,edad,fecha_de_nacimiento,direccion);
+        this.division = division;
         this.materias = materias;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public Fecha getFecha_de_nacimiento() {
-        return fecha_de_nacimiento;
-    }
-
-    public void setFecha_de_nacimiento(Fecha fecha_de_nacimiento) {
-        this.fecha_de_nacimiento = fecha_de_nacimiento;
     }
 
     public ArrayList<Materias> getMaterias() {
@@ -53,7 +25,6 @@ public class Alumno {
     public void setMaterias(ArrayList<Materias> materias) {
         this.materias = materias;
     }
-
 
     public void menorNota(){
         double menor=10;
@@ -116,7 +87,7 @@ public class Alumno {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        Alumno alumno = new Alumno("Juan","Sampieri",new Fecha(2,7,2005),new ArrayList<Materias>());
+        Alumno alumno = new Alumno("Juan","Sampieri", 25, new Fecha(2,7,2005), "bolivia 5717", "5to A", new ArrayList<Materias>());
         alumno.agregarMateria("Matematica");
         alumno.agregarMateria("Lengua");
         alumno.agregarMateria("Redes");

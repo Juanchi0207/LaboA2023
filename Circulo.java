@@ -1,6 +1,6 @@
 
 
-    public class Circulo {
+    public class Circulo extends Figura_geometrica{
         private int radio;
 
         public void setRadio(int radio) {
@@ -12,18 +12,18 @@
         public int getRadio() {
             return radio;
         }
+
+        @Override
         public double calcularArea() {
-            double area = (Math.PI * (radio * radio));
-            return area;
+            return (Math.PI*(radio*radio));
         }
 
-            public double calcularPerimetro(){
-                double perimetro;
-                perimetro = 2 * Math.PI * radio;
-                return perimetro;
-            }
+        @Override
+        public double calcularPerimetro() {
+            return 2*Math.PI*radio;
+        }
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Circulo circ1 = new Circulo();
 
 
