@@ -57,40 +57,128 @@ public class PedidosAlmuerzo {
         this.entregado = entregado;
     }
 
-        public ArrayList<PedidosAlmuerzo> menu(){
-            ArrayList<PedidosAlmuerzo> ordenes;
-            Scanner entrada = new Scanner(System.in);
-                    int menu = entrada.nextInt();
-            System.out.println("Ingrese 1 si desea agregar un pedido");
-            System.out.println("Ingrese 2 si desea eliminar un pedido");
-            System.out.println("Ingrese 3 si desea modificar un pedido");
-            /*if (menu == 1){
-            Scanner entrada = new Scanner(System.in);
-                String entradaStr = entrada.nextLine();
-                System.out.println("Ingrese el nombre de la persona");
-                ordenes.persona.add(//nombre);
-                        System.out.println("Ingrese el plato ");
-                ordenes.plato.add(//plato);
-                        System.out.println("Ingrese la hora a entregar");
-                ordenes.hora.add(//hora);
-                        System.out.println("Ingrese el estado ");
-                ordenes.entregado.add(//entregado);
-                        ordenes.fecha_creacion.add(//fecha al momento)
-           */
+    ArrayList<Persona> personas = new ArrayList<Persona>();
+    ArrayList<Plato> platos = new ArrayList<Plato>();
+    ArrayList<PedidosAlmuerzo> pedidos = new ArrayList<PedidosAlmuerzo>();
 
+    public void menu() {
+        ArrayList<PedidosAlmuerzo> ordenes = new ArrayList<PedidosAlmuerzo>();
+        Scanner entrada = new Scanner(System.in);
+        int menu = entrada.nextInt();
+        System.out.println("Ingrese 1 si desea agregar un pedido");
+        System.out.println("Ingrese 2 si desea eliminar un pedido");
+        System.out.println("Ingrese 3 si desea modificar un pedido");
+        System.out.println("Ingrese 4 si desea agregar un alumno a la base de datos");
+        System.out.println("Ingrese 5 si desea agregar un profesor a la base de datos");
+        System.out.println("Ingrese 6 si desea eliminiar a un alumno a la base de datos");
+        System.out.println("Ingrese 7 si desea eliminar a un profesor de la base de datos");
+        System.out.println("Ingrese 8 si desea agregar un plato");
+        if (menu == 1) {
+            agregarPedido();
+        }
+        if (menu == 2) {
 
-            if (menu == 2){
+        }
 
+    }
+
+    public void agregarPedido() {
+        Scanner entrada = new Scanner(System.in);
+        int dia = entrada.nextInt();
+        int mes = entrada.nextInt();
+        int anio = entrada.nextInt();
+        Fecha fechaCreacion = new Fecha(dia, mes, anio);
+        String nomPlato = entrada.nextLine();
+        int precio = entrada.nextInt();
+        Plato plato1 = new Plato(nomPlato, precio);
+        System.out.println("La persona es profesor o alumno?");
+        String condicion = entrada.nextLine();
+        int hora = entrada.nextInt();
+        int minutos = entrada.nextInt();
+        Tiempo horaFinal = new Tiempo(hora, minutos);
+        boolean entregado = entrada.nextBoolean();
+        String nombre = entrada.nextLine();
+        String apellido = entrada.nextLine();
+        for (int i = 0; i < personas.size(); i++) {
+            if (personas.get(i).getNombre().equals(nombre) && personas.get(i).getApellido().equals(apellido)) {
+                PedidosAlmuerzo pedido = new PedidosAlmuerzo(fechaCreacion, plato1, personas.get(i), horaFinal, entregado);
+                pedidos.add(pedido);
             }
-            if (menu == 3){
-                    System.out.println("Ingrese el ID del pedido a modificar");
-                Scanner entrada = new Scanner(System.in);
-                int idped = entrada.nextInt();
-                for(int i =0; ordenes.size()<i;i++){
-                    if (ordenes.ID = ordenes(i).getID)
-                        int idpedido=ordenes.get();
+        }
+    }
+
+    public void agregarAlumno() {
+        Scanner entrada = new Scanner(System.in);
+        String nombre = entrada.nextLine();
+        String apellido = entrada.nextLine();
+        String division = entrada.nextLine();
+        entrada.next();
+        Alumno alumno1 = new Alumno(nombre, apellido, division);
+        personas.add(alumno1);
+    }
+
+    public void agregarProfesor() {
+        Scanner entrada = new Scanner(System.in);
+        String nombre = entrada.nextLine();
+        String apellido = entrada.nextLine();
+        int porcentajeDescuento = entrada.nextInt();
+        entrada.next();
+        Profesor profesor1 = new Profesor(nombre, apellido, porcentajeDescuento);
+        personas.add(profesor1);
+    }
+
+    public void agregarPlato() {
+        Scanner entrada = new Scanner(System.in);
+        String nombrePlato = entrada.nextLine();
+        int precio = entrada.nextInt();
+        entrada.next();
+        Plato plato1 = new Plato(nombrePlato, precio);
+        platos.add(plato1);
+    }
+
+    public void eliminarProfesor() {
+        /*deberia poner un boolean de profesor para diferenciarlo de alumno en vector personas*/
+        Scanner entrada = new Scanner(System.in);
+        String nombre = entrada.nextLine();
+        String apellido = entrada.nextLine();
+        boolean eliminacion=false;
+        for (int i = 0; i < personas.size(); i++) {
+            if (personas.get(i) instanceof Profesor) {
+                if (nombre.equals(personas.get(i).getNombre())  && apellido.equals(personas.get(i).getApellido())) {
+                    personas.remove(i);
+                    System.out.println("La persona se ha eliminado exitosamente");
+                    eliminacion=true;
+                    i=personas.size()+1;
                 }
-
+            } else {
+                System.out.println("La persona seleccionada no es un Profesor");
             }
-        return ordenes;
+        }
+        if (eliminacion==false){
+            System.out.println("No se pudo eliminar a ninguna persona");
+        }
+    }
+
+    public void eliminarAlumno() {
+        /*deberia poner un boolean de profesor para diferenciarlo de alumno en vector personas*/
+        Scanner entrada = new Scanner(System.in);
+        String nombre = entrada.nextLine();
+        String apellido= entrada.nextLine();
+        boolean eliminacion=false;
+        for (int i = 0; i < personas.size(); i++) {
+            if (personas.get(i) instanceof Alumno) {
+                if (nombre.equals(personas.get(i).getNombre())  && apellido.equals(personas.get(i).getApellido())) {
+                    personas.remove(i);
+                    System.out.println("La persona se ha eliminado exitosamente");
+                    eliminacion=true;
+                    i=personas.size()+1;
+                }
+            } else {
+                System.out.println("La persona seleccionada no es un Alumno");
+            }
+        }
+        if (!eliminacion){
+            System.out.println("No se pudo eliminar a ninguna persona");
+        }
+    }
 }

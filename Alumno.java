@@ -12,6 +12,11 @@ public class Alumno extends Persona{
         this.materias = new ArrayList<Materias>();
     }
 
+    public Alumno(String nombre, String apellido, String division){
+        super(nombre, apellido);
+        this.division=division;
+    }
+
     public Alumno(String nombre, String apellido, int edad, Fecha fecha_de_nacimiento, String direccion, String division, ArrayList<Materias> materias) {
         super(nombre,apellido,edad,fecha_de_nacimiento,direccion);
         this.division = division;

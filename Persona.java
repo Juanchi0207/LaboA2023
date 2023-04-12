@@ -11,6 +11,11 @@ public class Persona {
         this.direccion="Esmeralda algo";
     }
 
+    public Persona(String nombre, String apellido){
+        this.nombre=nombre;
+        this.apellido=apellido;
+    }
+
     public Persona(String nombre, String apellido, int edad, Fecha fecha_nacimiento, String direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -19,11 +24,6 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public Persona(String nombre, String direccion) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.direccion = direccion;
-    }
 
     public Persona(String nombre, int edad) {
         this.nombre = nombre;
