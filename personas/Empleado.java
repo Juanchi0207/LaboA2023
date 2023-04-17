@@ -1,3 +1,5 @@
+package personas;
+
 public class Empleado {
     private String nombre;
 
@@ -15,6 +17,6 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado " + nombre;
+        return "personas.Empleado " + nombre;
     }
 }

@@ -1,8 +1,10 @@
-import java.text.DecimalFormat;
+package personas;
+import tiempos.Fecha;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Alumno extends Persona{
+public class Alumno extends Persona {
     private String division;
     private ArrayList<Materias>materias;
 

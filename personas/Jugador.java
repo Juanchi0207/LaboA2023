@@ -1,3 +1,5 @@
+package personas;
+
 import java.util.ArrayList;
 
 public class Jugador {

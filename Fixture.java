@@ -7,7 +7,7 @@ public class Partidos {
     private Equipo equipo1;
     private Equipo equipo2;
     private int horario;
-    private Fecha fecha;
+    private tiempos.Fecha fecha;
 
 
 

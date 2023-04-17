@@ -1,3 +1,5 @@
+import personas.Persona;
+
 import java.util.ArrayList;
 
 public class Ej3_U2 {

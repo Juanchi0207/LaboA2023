@@ -1,3 +1,6 @@
+import personas.Persona;
+import tiempos.Fecha;
+
 public class Libro {
     private String titulo;
     private Persona autor;

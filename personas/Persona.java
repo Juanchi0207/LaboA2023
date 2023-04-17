@@ -1,14 +1,23 @@
+package personas;
+
 public class Persona {
     private String nombre;
     private String apellido;
     private int edad;
     private Fecha fecha_nacimiento;
     private String direccion;
+    private int numeroTelefono;
 
     public Persona(){
         this.nombre="Ciro";
         this.edad=17;
         this.direccion="Esmeralda algo";
+    }
+
+    public Persona(String nombre, String apellido, int numeroTelefono){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.numeroTelefono=numeroTelefono;
     }
 
     public Persona(String nombre, String apellido){
@@ -70,6 +79,14 @@ public class Persona {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+    public int getNumeroTelefono() {
+        return numeroTelefono;
+    }
+
+    public void setNumeroTelefono(int numeroTelefono) {
+        this.numeroTelefono = numeroTelefono;
+    }
+
 
     public static void main(String[] args) {
         Persona persona1=new Persona();

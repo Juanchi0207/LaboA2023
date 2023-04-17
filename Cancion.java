@@ -1,3 +1,5 @@
+import personas.Persona;
+
 public class Cancion {
     private Persona autor;
     private String titulo;

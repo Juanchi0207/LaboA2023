@@ -1,3 +1,6 @@
+import personas.Jugador;
+import tiempos.Fecha;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

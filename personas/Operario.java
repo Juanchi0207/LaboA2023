@@ -1,3 +1,5 @@
+package personas;
+
 public class Operario extends Empleado{
 
     public Operario(String nom) {
@@ -6,6 +8,6 @@ public class Operario extends Empleado{
 
     @Override
     public String toString() {
-        return "Empleado " + getNombre() + " -> " + " Operario";
+        return "personas.Empleado " + getNombre() + " -> " + " personas.Operario";
     }
 }

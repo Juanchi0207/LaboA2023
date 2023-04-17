@@ -1,3 +1,5 @@
+package personas;
+
 public class Directivo extends Empleado{
     public Directivo(String nom) {
         super(nom);
@@ -5,6 +7,6 @@ public class Directivo extends Empleado{
 
     @Override
     public String toString() {
-        return "Empleado " + getNombre() + " -> " + " Directivo";
+        return "personas.Empleado " + getNombre() + " -> " + " personas.Directivo";
     }
 }

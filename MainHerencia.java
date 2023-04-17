@@ -1,3 +1,5 @@
+import personas.*;
+
 public class MainHerencia {
     public static void main(String[] args) {
         Empleado E1=new Empleado("Jose");
