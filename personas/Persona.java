@@ -1,4 +1,5 @@
 package personas;
+import tiempos.Fecha;
 
 public class Persona {
     private String nombre;
