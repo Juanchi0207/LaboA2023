@@ -5,8 +5,8 @@ public class DetectorHumo extends Sensor{
         super(conectado, valor, valorUmbral, añoAdquisicion);
     }
     @Override
-    public void salto(){
-        System.out.println("Se ha llamdo a los bomberos");
+    public void disparoAlarma(){
+        System.out.println("Se ha llamado a los bomberos");
     }
 }
 

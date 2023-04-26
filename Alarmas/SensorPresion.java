@@ -5,7 +5,7 @@ public class SensorPresion extends Sensor{
         super(conectado, valor, valorUmbral, añoAdquisicion);
     }
     @Override
-    public void salto(){
+    public void disparoAlarma(){
         System.out.println("Sensor de presión activado.");
     }
 }

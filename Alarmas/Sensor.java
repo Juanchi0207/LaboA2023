@@ -45,7 +45,13 @@ public abstract class Sensor {
         this.añoAdquisicion = añoAdquisicion;
     }
 
-    public void salto(){
-        System.out.println("Salto el sensor");
+    public void alarma(){
+        if (getValor()>=getValorUmbral()){
+            disparoAlarma();
+        }
     };
+
+    public void disparoAlarma() {
+    }
+
 }

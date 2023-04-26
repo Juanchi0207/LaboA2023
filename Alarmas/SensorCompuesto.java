@@ -2,15 +2,27 @@ package Alarmas;
 
 import java.util.ArrayList;
 
-public class SensorCompuesto extends Sensor {
-    ArrayList<Sensor> sensores;
-    public SensorCompuesto(boolean conectado, int valor, int valorUmbral, int añoAdquisicion) {
-        super(conectado, valor, valorUmbral, añoAdquisicion);
+public class SensorCompuesto {
+   private ArrayList<Sensor> sensores;
+   private int valorUmbral;
+
+    public SensorCompuesto(ArrayList<Sensor> sensores, int valorUmbral) {
+        this.sensores = sensores;
+        this.valorUmbral = valorUmbral;
     }
 
-    @Override
-    public void salto() {
+    public void alarma() {
+        int promedio = 0;
+        for (int i = 0; i < sensores.size(); i++) {
+            int aux = sensores.get(i).getValor();
+            promedio += aux;
+        }
+        if(this.valorUmbral <(promedio/ sensores.size())){
+            disparoAlarma();
+        }
+    }
+
+    public void disparoAlarma() {
         System.out.println("Salto el sensor compuesto");
     }
-
 }

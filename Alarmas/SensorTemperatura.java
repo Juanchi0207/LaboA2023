@@ -5,7 +5,7 @@ public class SensorTemperatura extends Sensor {
         super(conectado, valor, valorUmbral, añoAdquisicion);
     }
     @Override
-    public void salto(){
+    public void disparoAlarma(){
         System.out.println("¡Cuidado! La temperatura sube");
     }
 }
