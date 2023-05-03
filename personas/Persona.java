@@ -5,9 +5,12 @@ public class Persona {
     private String nombre;
     private String apellido;
     private int edad;
+    private int dni;
     private Fecha fecha_nacimiento;
     private String direccion;
     private int numeroTelefono;
+
+
 
     public Persona(){
         this.nombre="Ciro";
@@ -33,12 +36,21 @@ public class Persona {
         this.direccion = direccion;
     }
 
+    public Persona(String nombre, String apellido, Fecha fecha_nacimiento, String direccion, int dni){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.direccion = direccion;
+    }
+
 
     public Persona(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
         this.direccion = "1234";
     }
+
 
     public String getNombre() {
         return nombre;
