@@ -43,5 +43,19 @@ public class Sistema {
         return fecha;
     }
 
+    public ArrayList<Cliente> getClientes() {
+        return clientes;
+    }
 
+    public void setClientes(ArrayList<Cliente> clientes) {
+        this.clientes = clientes;
+    }
+
+    public ArrayList<CuentaBancaria> getCuentasBancarias() {
+        return cuentasBancarias;
+    }
+
+    public void setCuentasBancarias(ArrayList<CuentaBancaria> cuentasBancarias) {
+        this.cuentasBancarias = cuentasBancarias;
+    }
 }

@@ -142,7 +142,6 @@ public class PedidosAlmuerzo {
                     PedidosAlmuerzo pedido = new PedidosAlmuerzo(fechaCreacion, plato1, personas.get(i), horaFinal, entregado);
                     pedidos.add(pedido);
                 }
-
             }
         }
     }

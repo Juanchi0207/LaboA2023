@@ -41,6 +41,5 @@ public class Sistema {
 
     public static void main(String[] args) {
         ArrayList<Producto>productos1=new ArrayList<Producto>();
-
     }
 }
