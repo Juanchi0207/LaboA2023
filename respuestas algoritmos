@@ -1,13 +1,13 @@
 1)
-a)3
-b)4
-c)6
+a)4
+b)5
+c)4n+4
 
 2) 
 f1)3+6n   O(3+6n)=O(n)
-f2)O(1)
-f3)3+2*e   O(e)
-f4)O(1)
+f2)O(1+10000*12)
+f3)3+2*n   O(n)
+f4)O(1000*1000)= O(1)
 f5)2+2*n+2*r  O(n+r)
 
 3)
@@ -34,8 +34,68 @@ c)int mesetaMasLarga(vector<int> &v){
 
 4)3+100*(4+6n) = 3+400+600n =403+600n  O(n)
 
-5)
+5)log2(n)*4+5= O(log2(n))
 
+6)int mesetaMasLarga(vector<int> &v){
+    int i = 0;
+    int maxMeseta = 0; 
+    int meseta=1;
+    while(i < v.size()){
+        if(v[i]%2!=0){
+            meseta++;
+        }
+        else{
+            if(meseta > maxMeseta){
+                maxMeseta=meseta;
+            }
+            meseta=1;
+        }
+        i++;
+    }
+    return maxMeseta;
+}
+
+7)a)vector<bool> devolverVector(vector<vector<bool>>matriz){
+    int pos=0;
+    for(int i=0;i<matriz.size();i++){
+        int contador=0;
+        for(int j=0;j<matriz.size();j++){
+           if(matriz[i]==matriz[j]){
+                contador++;
+           }
+        }
+        if(contador==1){
+            pos=i;
+        }
+    }
+    return matriz[pos];
+} tiempo de ejecucion: O(n*n)
+
+b)
+c)
+
+8)vector<int>devolverVector(vector<int>vec1, vector<int>vec2){
+    vector<int>suma;
+    for(int i=0;i<vec1.size();i++){
+        for(int j=0;j<vec2.size();j++ ){
+        if (vec1[i]<vec2[j]){
+            suma.push_back(vec1[i]);
+                j=j-1;
+            }
+        
+        else{
+            suma.push_back(vec2[j]);
+                i=i-1;
+            }
+        }
+    }
+       
+       
+    
+    return suma;
+}
+
+9)
 
 
 
