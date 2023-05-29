@@ -10,7 +10,7 @@ vector<int> indicesRepetidos(vector<int>v1,vector<int>v2,vector<int>v3){
     int k=0;
     while(i<v1.size() && j<v2.size() && k<v3.size()){
         if(v1[i]==v2[j]){
-
+            
         }
     }
     return posiciones;
