@@ -72,7 +72,28 @@ c)int mesetaMasLarga(vector<int> &v){
 } tiempo de ejecucion: O(n*n)
 
 b)
-c)
+c)vector<bool> devolverVector(vector<vector<bool>>matriz){
+    int pos=0;
+    for(int i=0;i<matriz[0].size();i++){
+        int cantFalse=0;
+        int cantTrue=0;
+        for(int j=0;j<matriz.size();j++){
+            if(matriz[j][i]==false){
+                cantFalse++;
+            }
+            else{
+                cantTrue++;
+            }
+        }
+        if(cantFalse%2==1){
+            matriz[0][i]=false;
+        }
+        if(cantTrue%2==1){
+            matriz[0][i]=true;
+        }
+    }
+    return matriz[pos];
+}
 
 8)vector<int>devolverVector(vector<int>vec1, vector<int>vec2){
     vector<int>suma;
