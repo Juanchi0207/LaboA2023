@@ -1,12 +1,15 @@
 package personas;
 import tiempos.Fecha;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class Persona {
     private String nombre;
     private String apellido;
     private int edad;
     private int dni;
-    private Fecha fecha_nacimiento;
+    private LocalDate fecha_nacimiento;
     private String direccion;
     private int numeroTelefono;
 
@@ -28,7 +31,7 @@ public class Persona {
         this.apellido=apellido;
     }
 
-    public Persona(String nombre, String apellido, int edad, Fecha fecha_nacimiento, String direccion) {
+    public Persona(String nombre, String apellido, int edad, LocalDate fecha_nacimiento, String direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -36,7 +39,7 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public Persona(String nombre, String apellido, Fecha fecha_nacimiento, String direccion, int dni){
+    public Persona(String nombre, String apellido, LocalDate fecha_nacimiento, String direccion, int dni){
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -76,11 +79,11 @@ public class Persona {
         this.edad = edad;
     }
 
-    public Fecha getFecha_nacimiento() {
+    public LocalDate getFecha_nacimiento() {
         return fecha_nacimiento;
     }
 
-    public void setFecha_nacimiento(Fecha fecha_nacimiento) {
+    public void setFecha_nacimiento(LocalDate fecha_nacimiento) {
         this.fecha_nacimiento = fecha_nacimiento;
     }
 
