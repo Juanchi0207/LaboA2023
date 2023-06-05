@@ -3,9 +3,12 @@ package ControlLlamadas;
 import personas.Persona;
 import tiempos.Fecha;
 
+import java.util.HashSet;
+
 public class Empleado extends Persona {
     private int dni;
     private String pais;
+    private HashSet<Llamada>registroLlamadas;
 
     public Empleado(){
         super("Ciro","Cerutti",1155667788);

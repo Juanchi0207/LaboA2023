@@ -23,7 +23,7 @@ public class SistemaAsistencia {
     public HashSet<EmpleadoAsistencia> EmpleadosPorcentajeAsistenciaxMes(int mes) {
         HashSet<EmpleadoAsistencia>empleadosMayor80=new HashSet<EmpleadoAsistencia>();
         for (EmpleadoAsistencia empleado : sistema) {
-           if(empleado.PorcentajeAsistenciaxMes(01)>0.8f){
+           if(empleado.PorcentajeAsistenciaxMes(mes)>0.8f){
                empleadosMayor80.add(empleado);
            }
 

@@ -20,6 +20,12 @@ public class Persona {
         this.edad=17;
         this.direccion="Esmeralda algo";
     }
+
+    public Persona(String nombre, String apellido, LocalDate fecha_nacimiento){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.fecha_nacimiento=fecha_nacimiento;
+    }
     public Persona(String nombre, String apellido, int numeroTelefono){
         this.nombre=nombre;
         this.apellido=apellido;
