@@ -1,5 +1,5 @@
 package TiendaElectronica;
-public class Producto {
+public abstract class Producto {
     private String nombre;
     private int stock;
     private float precio;

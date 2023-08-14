@@ -1,7 +1,8 @@
 package Banco;
 
-import tiempos.Fecha;
+import personas.Cliente;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Sistema {
@@ -33,10 +34,10 @@ public class Sistema {
         return nomApellido;
     }
 
-    public Fecha clienteMasJoven(){
-        Fecha fecha=clientes.get(0).getFecha_nacimiento();
+    public LocalDate clienteMasJoven(){
+        LocalDate fecha=clientes.get(0).getFecha_nacimiento();
         for (int i=0; i< clientes.size();i++){
-            if (clientes.get(i).getFecha_nacimiento().getAnio()<fecha.getAnio() && clientes.get(i).getFecha_nacimiento().getMes()<fecha.getMes() && clientes.get(i).getFecha_nacimiento().getDia()< fecha.getDia()){
+            if (clientes.get(i).getFecha_nacimiento().getYear()<fecha.getYear() && clientes.get(i).getFecha_nacimiento().getMonth().getValue()<fecha.getMonth().getValue() && clientes.get(i).getFecha_nacimiento().getDayOfMonth()< fecha.getDayOfMonth()){
                 fecha=clientes.get(i).getFecha_nacimiento();
             }
         }

@@ -1,5 +1,8 @@
 package Banco;
 
+
+import personas.Cliente;
+
 public class Cheque {
     private Cliente emisor;
     private Cliente receptor;

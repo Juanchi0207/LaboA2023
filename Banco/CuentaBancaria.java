@@ -1,5 +1,7 @@
 package Banco;
 
+import personas.Cliente;
+
 public class CuentaBancaria{
     private Cliente titular;
     private int cbu;

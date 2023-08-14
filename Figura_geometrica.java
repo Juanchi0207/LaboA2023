@@ -1,4 +1,4 @@
-public class Figura_geometrica {
+public abstract class Figura_geometrica {
 
     public double calcularArea(){
         return 0.0;

@@ -19,7 +19,7 @@ public class Libro {
     }
     public Libro() {
         this.titulo = "Crimen y Castigo";
-        this.autor = new Persona();
+       // this.autor = new Persona();
         this.ISBN = 35749461;
         this.cantidad_paginas = 190;
         this.editorial = "KEL";
@@ -27,7 +27,7 @@ public class Libro {
     }
     public Libro(String titulo){
         this.titulo = titulo;
-        this.autor = new Persona();
+        //this.autor = new Persona();
         this.ISBN = 35749461;
         this.cantidad_paginas = 190;
         this.editorial = "KEL";

@@ -4,7 +4,7 @@ import tiempos.Fecha;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class Persona {
+public abstract class Persona {
     private String nombre;
     private String apellido;
     private int edad;
@@ -110,9 +110,6 @@ public class Persona {
 
 
     public static void main(String[] args) {
-        Persona persona1=new Persona();
-        System.out.println(persona1.getNombre());
-        System.out.println(persona1.getEdad());
-        System.out.println(persona1.getDireccion());
+
     }
 }

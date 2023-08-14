@@ -2,7 +2,7 @@ package EmpresaComputadoras;
 
 import java.util.ArrayList;
 
-public class Componentes {
+public abstract class Componentes {
     private String fabricante;
     private String modelo;
     private int precio;

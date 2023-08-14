@@ -1,9 +1,8 @@
 public class Cafetera {
-    private int cantidad_maxima;
+    private static int cantidad_maxima=1000;
     private int cantidad_actual;
     public Cafetera(){
         cantidad_actual=0;
-        cantidad_maxima=1000;
     }
     public Cafetera(int cantidad_maxima){
         cantidad_actual=cantidad_maxima;
@@ -36,7 +35,7 @@ public class Cafetera {
     }
 
     public void llenarCafetera(Cafetera cafetera1){
-        cafetera1.cantidad_actual=cantidad_maxima;
+        cafetera1.cantidad_actual=Cafetera.cantidad_maxima;
         System.out.println(cafetera1.cantidad_actual);
     }
 
@@ -58,8 +57,8 @@ public class Cafetera {
         System.out.println(cafetera1.cantidad_actual);
     }
     public void anadirCafe(Cafetera cafetera1, int cant_cafe){
-        if (cafetera1.cantidad_actual+cant_cafe>cafetera1.cantidad_maxima) {
-            cafetera1.cantidad_actual = cafetera1.cantidad_maxima;
+        if (cafetera1.cantidad_actual+cant_cafe>Cafetera.cantidad_maxima) {
+            cafetera1.cantidad_actual = Cafetera.cantidad_maxima;
             System.out.println(cafetera1.cantidad_actual);
         }
         else{

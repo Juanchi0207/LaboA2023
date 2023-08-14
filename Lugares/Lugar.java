@@ -2,7 +2,7 @@ package Lugares;
 
 import java.util.HashSet;
 
-public class Lugar {
+public abstract class Lugar {
     private String nombre;
     private int codigo;
     private HashSet<Coordenadas>latYlong;
@@ -37,8 +37,6 @@ public class Lugar {
         this.latYlong = latYlong;
     }
 
-    public int calcularPoblacion(){
-        return 0;
-    }
+    public abstract int calcularPoblacion();
 
 }

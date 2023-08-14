@@ -1,14 +1,17 @@
 package EmpresaComputadoras;
 
 import emprsaBufete.PedidosAlmuerzo;
+import personas.Cliente;
 import personas.Persona;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EmpresaComputadoras {
     private ArrayList<PedidosComputadoras>pedidos;
     private ArrayList<Componentes>componentes;
+    private static int recargo=5;
 
 
     public void agregarPedido(){
@@ -58,7 +61,7 @@ public class EmpresaComputadoras {
         }
         Computadora computadoraPedido=new Computadora(componentesPC);
         int precio=precioTotal(computadoraPedido);
-        Persona persona=new Persona();
+        Cliente cliente = new Cliente("Juan","Sampieri", LocalDate.now(),"Bolivia 5717", 468782789,2046878279);
         System.out.println("Efectivo o tarjeta?");
         int metodo= entrada.nextInt();
         entrada.next();
@@ -67,12 +70,12 @@ public class EmpresaComputadoras {
             String banco= entrada.nextLine();
             String tipo= entrada.nextLine();
             Tarjeta tarjeta=new Tarjeta(numTarjeta,banco,tipo);
-            precio=precio+((5*precio)/100);
-            PedidosComputadoras pedido=new PedidosComputadoras(computadoraPedido,persona,precio,tarjeta);
+            precio=precio+((EmpresaComputadoras.recargo*precio)/100);
+            PedidosComputadoras pedido=new PedidosComputadoras(computadoraPedido,cliente,precio,tarjeta);
         }
         else {
             Efectivo efectivo=new Efectivo();
-            PedidosComputadoras pedido=new PedidosComputadoras(computadoraPedido,persona,precio,efectivo);
+            PedidosComputadoras pedido=new PedidosComputadoras(computadoraPedido,cliente,precio,efectivo);
         }
             for (int i =0;i<componentesPC.size(); i++){
                 componentesPC.get(i).setStock(componentesPC.get(i).getStock()-1);
