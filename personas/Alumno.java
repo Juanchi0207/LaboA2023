@@ -2,6 +2,7 @@ package personas;
 import tiempos.Fecha;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ public class Alumno extends Persona {
     private ArrayList<Materias>materias;
 
     public Alumno() {
-        super("Juan","Sampieri",25,new LocalDate(2,7,2005),"bolivia 5717");
+        super("Juan","Sampieri",25,LocalDate.of(2,7,2005),"bolivia 5717");
         this.division = "5to A";
         this.materias = new ArrayList<Materias>();
     }
@@ -95,7 +96,7 @@ public class Alumno extends Persona {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        Alumno alumno = new Alumno("Juan","Sampieri", 25, new LocalDate(2,7,2005), "bolivia 5717", "5to A", new ArrayList<Materias>());
+        Alumno alumno = new Alumno("Juan","Sampieri", 25, LocalDate.of(2,7,2005), "bolivia 5717", "5to A", new ArrayList<Materias>());
         alumno.agregarMateria("Matematica");
         alumno.agregarMateria("Lengua");
         alumno.agregarMateria("Redes");

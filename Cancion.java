@@ -10,7 +10,7 @@ public class Cancion {
     }
 
     public Cancion(){
-        this.autor= new Persona(" ", " ");
+       // this.autor= new Persona(" ", " ");
         this.titulo=" ";
     }
 

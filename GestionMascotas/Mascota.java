@@ -29,4 +29,7 @@ public abstract class Mascota {
 
     public abstract String Saludo(String nomDueño, String nomMascota);
 
+    public abstract void alimentar(String nomMascota);
+    public abstract String tipo(String nomMascota);
 }
+
