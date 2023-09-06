@@ -5,6 +5,6 @@ public class CPU extends Componentes{
         super(fabricante, modelo, precio, stock);
     }
     public CPU(){
-        super("AMD","RYZEN 5 5600G",790,4);
+        super("AMD","RYZEN 5 5600G",790,0);
     }
 }

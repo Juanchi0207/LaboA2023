@@ -106,5 +106,7 @@ public class Sistema {
         sistema.listaEspectadores.add(espectador2);
 
         sistema.funcionesDisponibles();
+        System.out.println(sistema.cantPeliculas());
+        System.out.println(sistema.cantUsuarios());
     }
 }

@@ -5,7 +5,7 @@ public class Pelicula {
     private double duracion;
     private Genero genero;
     private int identificador;
-    private static int contador=1;
+    private static int contador=0;
 
     public static int getContador() {
         return contador;
@@ -50,7 +50,8 @@ public class Pelicula {
         this.titulo = titulo;
         this.duracion = duracion;
         this.genero = genero;
-        this.identificador=contador;
         contador++;
+        this.identificador=contador;
+
     }
 }

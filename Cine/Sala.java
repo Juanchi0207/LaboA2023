@@ -2,7 +2,7 @@ package Cine;
 
 public class Sala {
     private int identificador;
-    private static int contador=1;
+    private static int contador=0;
     private static int butacas=45;
 
     public int getIdentificador() {
@@ -30,7 +30,7 @@ public class Sala {
     }
 
     public Sala() {
-        this.identificador = contador;
         contador++;
+        this.identificador = contador;
     }
 }

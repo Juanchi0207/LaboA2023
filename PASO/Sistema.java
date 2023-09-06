@@ -92,14 +92,10 @@ public class Sistema {
         listaVotantes.add(votante2);
         listaVotantes.add(votante3);
         listaVotantes.add(votante4);
-        HashMap<Provincia,Integer>listaProvincias=new HashMap<>();
-        for (Provincia provincia:Provincia.values()){
-            listaProvincias.put(provincia,0);
-        }
-        Candidato candidato1=new Candidato("Javier", "Milei",new HashSet<String>(), listaProvincias);
-        Candidato candidato2=new Candidato("Sergio","Massa",new HashSet<String>(), listaProvincias);
-        Candidato candidato3=new Candidato("Patricia","Bulrrich",new HashSet<String>(), listaProvincias);
-        Candidato candidato4=new Candidato("Nicolas","Del Caño",new HashSet<String>(), listaProvincias);
+        Candidato candidato1=new Candidato("Javier", "Milei",new HashSet<String>());
+        Candidato candidato2=new Candidato("Sergio","Massa",new HashSet<String>());
+        Candidato candidato3=new Candidato("Patricia","Bulrrich",new HashSet<String>());
+        Candidato candidato4=new Candidato("Nicolas","Del Caño",new HashSet<String>());
         Partido partido1=new Partido(PartidosPoliticos.EL_POLI_AVANZA,candidato1);
         Partido partido2=new Partido(PartidosPoliticos.FRENTE_DE_CONSTITUYENTES, candidato2);
         Partido partido3=new Partido(PartidosPoliticos.JUNTOS_POR_EL_POLI,candidato3);
@@ -111,8 +107,10 @@ public class Sistema {
         listaPartidos.add(partido4);
         Sistema sistema=new Sistema(listaPartidos,listaVotantes);
         System.out.println(sistema.cantidadNoVotantes());
-       // System.out.println(sistema.emitirVoto(partido2,votante1));
-        votante1.votar(partido3);
+        //System.out.println(sistema.emitirVoto(partido1,votante1));
+        votante1.votar(partido1);
+        votante2.votar(partido1);
+        votante3.votar(partido2);
         sistema.votosXcandidato();
         System.out.println(sistema.cantidadNoVotantes());
     }

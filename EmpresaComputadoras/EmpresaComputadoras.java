@@ -28,11 +28,16 @@ public class EmpresaComputadoras {
                 System.out.println((i+1) + ". " + componentes.get(i).getModelo());
             }
             int seleccion= entrada.nextInt();
-            if (componentes.get(seleccion-1).getStock()>0){
-                componentesPC.add(componentes.get(seleccion-1));
+            try {
+                if (componentes.get(seleccion-1).getStock()>=0){
+                    componentesPC.add(componentes.get(seleccion-1));
+                }
+                else {
+                    throw new ExcepcionStockProductos("No hay stock del producto");
+                }
             }
-            else {
-                System.out.println("No hay stock del producto");
+            catch (ExcepcionStockProductos e){
+                System.out.println(e.getMessage());
             }
             for (int x=0;x<componentesPC.size();x++){
                 if (componentesPC.get(x) instanceof CPU){

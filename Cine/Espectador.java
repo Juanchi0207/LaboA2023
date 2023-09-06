@@ -7,7 +7,7 @@ import java.util.HashSet;
 
 public class Espectador extends Persona {
     private int identificador;
-    private static int contador=1;
+    private static int contador=0;
     private String mailRegistro;
     private HashSet<Funcion>historial;
 
@@ -51,10 +51,10 @@ public class Espectador extends Persona {
 
     public Espectador(String nombre, String apellido, LocalDate fecha_nacimiento, String mailRegistro, HashSet<Funcion> historial) {
         super(nombre, apellido, fecha_nacimiento);
+        contador++;
         this.identificador = contador;
         this.mailRegistro = mailRegistro;
         this.historial = historial;
-        contador++;
     }
 
     public Espectador(String nombre, String apellido, int numeroTelefono, int identificador, String mailRegistro, HashSet<Funcion> historial) {
