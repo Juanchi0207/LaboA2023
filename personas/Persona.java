@@ -12,8 +12,14 @@ public abstract class Persona {
     private LocalDate fecha_nacimiento;
     private String direccion;
     private int numeroTelefono;
+    private String mail;
 
-
+    public Persona(String nombre, int dni, LocalDate fecha_nacimiento, String mail) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.mail = mail;
+    }
 
     public Persona(){
         this.nombre="Ciro";
@@ -21,16 +27,22 @@ public abstract class Persona {
         this.direccion="Esmeralda algo";
     }
 
+    public Persona(String nombre, String apellido, int dni){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.dni=dni;
+    }
+
     public Persona(String nombre, String apellido, LocalDate fecha_nacimiento){
         this.nombre=nombre;
         this.apellido=apellido;
         this.fecha_nacimiento=fecha_nacimiento;
     }
-    public Persona(String nombre, String apellido, int numeroTelefono){
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.numeroTelefono=numeroTelefono;
-    }
+//   // public Persona(String nombre, String apellido, int numeroTelefono){
+//        this.nombre=nombre;
+//        this.apellido=apellido;
+//        this.numeroTelefono=numeroTelefono;
+//  //  }
 
     public Persona(String nombre, String apellido){
         this.nombre=nombre;
