@@ -120,6 +120,21 @@ public abstract class Persona {
         this.numeroTelefono = numeroTelefono;
     }
 
+    public int getDni() {
+        return dni;
+    }
+
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
 
     public static void main(String[] args) {
 
