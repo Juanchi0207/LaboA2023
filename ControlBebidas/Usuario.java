@@ -29,13 +29,20 @@ public class Usuario extends Persona {
         else {
             listaBebidas.put(bebida,cantidad);
         }
+        System.out.println(getNombre() + " tomó " + cantidad + " " + bebida.getNombre());
     }
 
     public int calcularCoeficienteHidratacion(){
         int coeficienteTotal=0;
+        System.out.println("Usuario: " + getNombre() + " " + getApellido());
         for (Map.Entry<Bebida,Integer> bebida:listaBebidas.entrySet()){
-            coeficienteTotal=coeficienteTotal+(bebida.getValue()*(bebida.getKey().getPositividad()-bebida.getKey().getNegatividad()));
+            int coeficienteBebida = bebida.getValue()*(bebida.getKey().getPositividad()-bebida.getKey().getNegatividad());
+            coeficienteTotal=coeficienteTotal+coeficienteBebida;
+            System.out.println("Coeficiente de " + bebida.getValue() + " " + bebida.getKey().getNombre() + ": " + coeficienteBebida);
         }
+
+        System.out.println("Coeficiente total de: " + coeficienteTotal);
+        System.out.println("-----");
         return coeficienteTotal;
     }
 

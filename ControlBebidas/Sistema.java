@@ -50,16 +50,20 @@ public class Sistema {
     }
 
     public void tomarBebida(int dni, Bebida bebida, int cantidad){
-        try {
-            if (listaBebidas.get(bebida)>=cantidad){
-                listaUsuarios.get(dni).tomarBebida(bebida,cantidad);
-                listaBebidas.put(bebida, listaBebidas.get(bebida)-cantidad);
+        if (listaBebidas.containsKey(bebida)) {
+            try {
+                if (listaBebidas.get(bebida) >= cantidad) {
+                    listaUsuarios.get(dni).tomarBebida(bebida, cantidad);
+                    listaBebidas.put(bebida, listaBebidas.get(bebida) - cantidad);
+                } else {
+                    throw new cantidadNoDisponible("No hay sufienctes bebidas para satisfacer sus necesidades");
+                }
+            } catch (cantidadNoDisponible e) {
+                System.out.println(e);
             }
-            else {
-                throw new cantidadNoDisponible("No hay sufienctes bebidas para satisfacer sus necesidades");
-            }
-        } catch (cantidadNoDisponible e) {
-            System.out.println(e);
+        }
+        else {
+            System.out.println("La bebida no existe en el negocio");
         }
     }
 
@@ -110,7 +114,15 @@ public class Sistema {
         System.out.println("--------------------------");
         sistema.coeficienteXpersona();
         System.out.println("--------------------------");
-        sistema.tomarBebida(46878279, bebidaNeutra2,1);
+        sistema.tomarBebida(46777777, bebidaNeutra2,1);
+        System.out.println("--------------------------");
         sistema.tomarBebida(46956247, bebidaNeutra2,1); // tira exception cantidad
+        System.out.println("--------------------------");
+
+        for (Map.Entry<Integer,Usuario> usuario:sistema.listaUsuarios.entrySet()){
+            if (usuario.getValue().getNombre().equals("Gonzalo")){
+                usuario.getValue().calcularCoeficienteHidratacion();
+            }
+        }
     }
 }
