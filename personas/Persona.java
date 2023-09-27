@@ -21,6 +21,13 @@ public abstract class Persona {
         this.mail = mail;
     }
 
+    public Persona(String nombre, String apellido, int dni, LocalDate fecha_nacimiento) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.fecha_nacimiento = fecha_nacimiento;
+    }
+
     public Persona(){
         this.nombre="Ciro";
         this.edad=17;
