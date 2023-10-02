@@ -64,15 +64,13 @@ public class Sistema {
 
         listaPartidos.add(partidoPolitico1);
         listaPartidos.add(partidoPolitico2);
+
         Sistema sistema=new Sistema(listaPartidos);
         sistema.hacerCampaña();
         System.out.println("Agrega una nueva paloma");
         PalomaMensajera palomaMensajera3=new PalomaMensajera("Aquiles", Color.NEGRO, "Palomin", true);
         sistema.agregarMensajero(palomaMensajera3, partidoPolitico1);
-
         sistema.hacerCampaña();
-
-
-
+        System.out.println("pance bot");
     }
 }
