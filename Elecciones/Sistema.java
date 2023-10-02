@@ -32,7 +32,7 @@ public class Sistema {
         }
     }
 
-    void agregarMensajero(Mensajeria mensajero, PartidoPolitico partidoPolitico){
+    public void agregarMensajero(Mensajeria mensajero, PartidoPolitico partidoPolitico){
         for (PartidoPolitico partido:listaPartidos){
             if (partido==partidoPolitico){
                 HashSet<Mensajeria>aux=partido.getListaEnviadores();

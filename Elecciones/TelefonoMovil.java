@@ -49,7 +49,7 @@ public class TelefonoMovil extends Dispositivo implements Mensajeria{
 
     @Override
     public void hacerCampaña(PartidoPolitico partidoPolitico) {
-        if (isPrendido() && getCredito()>0) {
+        if (isPrendido() && getCredito()>=20) {
             System.out.println("Conectando con la antena mas cercana... Vote por " + partidoPolitico.getNombre() + " para un mejor futuro");
             credito=credito-20;
         }
