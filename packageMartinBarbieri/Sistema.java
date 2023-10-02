@@ -157,11 +157,6 @@ public class Sistema {
         sistema.beber(u3, bebidaNeutra2,1); // tira exception cantidad
         System.out.println("--------------------------");
 
-//        for (Map.Entry<Integer, Usuario> usuario:sistema.listaUsuarios.entrySet()){
-//            if (usuario.getValue().getNombre().equals("Gonzalo")){
-//                usuario.getValue().calcularCoeficienteHidratacion();
-//            }
-//        }
     }
 }
 

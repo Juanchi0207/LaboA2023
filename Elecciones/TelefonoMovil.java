@@ -51,6 +51,7 @@ public class TelefonoMovil extends Dispositivo implements Mensajeria{
     public void hacerCampaña(PartidoPolitico partidoPolitico) {
         if (isPrendido() && getCredito()>0) {
             System.out.println("Conectando con la antena mas cercana... Vote por " + partidoPolitico.getNombre() + " para un mejor futuro");
+            credito=credito-20;
         }
         else {
             System.out.println("El telefono no esta prendido o no tiene credito");
