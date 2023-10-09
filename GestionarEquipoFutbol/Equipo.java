@@ -56,11 +56,16 @@ public class Equipo implements Contrato{
         if (!jugador.getListaEquiposPasados().contains(this)){
             if (jugador instanceof Arquero && ((Arquero) jugador).getPorcentajeAtajadas()>60 && ((Arquero) jugador).getGolesRecibidos()<10){
                 listaJugadores.add(jugador);
+                jugador.getListaEquiposPasados().add(this);
                 jugador.setContratado(true);
+                System.out.println("Jugador contratado");
+
             }
             else if (jugador instanceof JugadorCampo && ((JugadorCampo) jugador).getGolesConvertidos()>30 && ((JugadorCampo) jugador).getCantAsistencias()>10){
                 listaJugadores.add(jugador);
                 jugador.setContratado(true);
+                jugador.getListaEquiposPasados().add(this);
+                System.out.println("Jugador contratado");
             }
             else {
                 throw new CriteriosContratoException("El jugador no cumple los criterios necesarios");
@@ -76,7 +81,9 @@ public class Equipo implements Contrato{
         if (jugador.getFechaVencimiento().isBefore(LocalDate.now())){
             if (jugador.getEquipoActual().equals(this)){
                 if (verificarEdad(jugador)<35){
-
+                    listaJugadores.add(jugador);
+                    System.out.println("Jugador renovado");
+                    jugador.setFechaVencimiento(LocalDate.now().plusMonths(6));
                 }
                 else {
                     throw new CriteriosRenovarException("El jugador pasa la edad de renovacion");
